@@ -3,7 +3,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "cd backend && gunicorn run:app",
+    "startCommand": "npm run build && npx serve -s build -l 3000",
     "restartPolicyType": "on_failure",
     "restartPolicyMaxRetries": 5
   }
